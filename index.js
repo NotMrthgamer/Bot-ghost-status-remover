@@ -26,7 +26,31 @@ const client = new Client({
     GatewayIntentBits.Guilds
   ],
 });
+const { ActivityType } = require('discord.js')
 
+client.user.setPresence({ 
+    activities: [{ 
+        name: 'with depression', 
+        type: ActivityType.Streaming, 
+        url: 'https://twitch.tv/monstercat' 
+    }], 
+    status: 'online' 
+});
+These are the supported activity types & status types:
+
+// Accepted activity types
+ActivityType.Playing
+ActivityType.Listening
+ActivityType.Watching
+ActivityType.Competing
+ActivityType.Streaming // Lets you use url parameter. This can be a YouTube or Twitch link.
+ActivityType.Custom // Unsupported in discord.js. Will be added at some point.
+
+// Accepted statusses
+"online"
+"offline"
+"idle"
+"dnd"
 const app = express();
 const port = 3000;
 app.get('/', (req, res) => {
