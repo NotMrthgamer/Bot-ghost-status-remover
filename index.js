@@ -38,7 +38,7 @@ app.listen(port, () => {
 });
 
 const statusMessages = ["🎮 Playing WorldsHub Server"];
-const statusTypes = [ 'dnd'];
+const statusTypes = [ 'idle'];
 let currentStatusIndex = 0;
 let currentTypeIndex = 0;
 
